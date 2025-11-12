@@ -19,31 +19,32 @@ class BankAccount:
     def show_balance(self):
         print(f"{self.owner} has ${self.__balance}")
  """
+
+class pet:
+    def __init__(pet, animal, happiness, hunger, clean):
+        pet.__happiness = happiness
+        pet.__hunger = hunger
+        pet.__clean = clean
+    def play(pet, happiness):
+        happiness = 75
+        response = input(f"Do you want to play with {pet_name}?")
+        if "yes" in response:
+            pet.__happiness += 5
+            pet.__hunger -= 5
+            pet.__clean -= 10
+            print(f"{pet_name} is happy!")
+        elif "no":
+            pet.__happiness += pet.__happiness
+        else:
+            print("Answer Invalid. Please Try Again")
+         
 name = input("What's your name?")
 print(f"Hi, {name}!")
 pet_name = input("what would you like to name your pet?")
 print(f"Very nice! Meet your class pet, goldfish, {pet_name}. Take good care of them!")
 
-class pet:
-    def __init__(pet, animal, happiness, hunger, clean):
-        pet._happiness = happiness
-        pet._hunger = hunger
-        pet._clean = clean
-    def play(pet, happiness):
-        happiness = 75
-        response = input(f"Do you want to play with {pet_name}?")
-        if "yes" in response:
-            happiness += 5
-            hunger -= 5
-            clean -= 10
-            print(f"{pet_name} is happy!")
-        elif "no":
-            happiness += happiness
-        else:
-            print("Answer Invalid. Please Try Again")
-
 """ class pet:
-    def __init__(animal, happiness, hunger, clean):
+    def __init__
         animal.happiness = happiness
         animal.hunger = hunger
         animal.clean = clean
