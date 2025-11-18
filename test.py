@@ -18,12 +18,6 @@ class BankAccount:
         self.__balance += amount
     def show_balance(self):
         print(f"{self.owner} has ${self.__balance}")
- """
-name = input("What's your name?")
-print(f"Hi, {name}!")
-pet_name = input("what would you like to name your pet?")
-print(f"Very nice! Meet your class pet, goldfish, {pet_name}. Take good care of them!")
-input(f"Do you want to play with {pet_name}?")
 
 class pet:
     def __init__(pet, happiness, hunger, clean, age):
@@ -81,9 +75,13 @@ class pet:
             pet.__happiness = 100
         if pet.__clean > 100:
             pet.__clean = 100
+name = input("What's your name?")
+print(f"Hi, {name}!")
+pet_name = input("what would you like to name your pet?")
+print(f"Very nice! Meet your class pet, goldfish, {pet_name}. Take good care of them!")
+input(f"Do you want to play with {pet_name}?")
 
-
-""" class pet:
+class pet:
     def __init__
         animal.happiness = happiness
         animal.hunger = hunger
@@ -96,4 +94,15 @@ class pet:
         animal._balance3 += clean
 
     def show_balance(pet_name):
-        print(f"{pet_name} is at {animal._balance1}% happiness") """
+        print(f"{pet_name} is at {animal._balance1}% happiness")  """
+
+def verifyemail( email, password ):
+    if "@" not in email:
+        return "not valid email"
+
+    for i in range(password):
+        i.count = i
+        if i <= 8:
+            return "not valid password"
+    return {'email': email, 'password': password}
+print(verifyemail("email", "passwd"))
