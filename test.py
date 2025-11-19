@@ -96,13 +96,13 @@ class pet:
     def show_balance(pet_name):
         print(f"{pet_name} is at {animal._balance1}% happiness")  """
 
-def verifyemail( email, password ):
+def verifyemail():
+    email = input("What is your email?")
+    password = input("What is your password?")
     if "@" not in email:
         return "not valid email"
-
-    for i in range(password):
-        i.count = i
-        if i <= 8:
-            return "not valid password"
-    return {'email': email, 'password': password}
-print(verifyemail("email", "passwd"))
+    if any(char.isupper() for char in password) == False:
+        return "inavlid password, needs at least 1 uppercase"
+    if "@" in email and any(char.isupper() for char in password) == True:
+        return "valid email and password!"
+print(verifyemail())
