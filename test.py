@@ -17,7 +17,13 @@ class BankAccount:
     def deposit(self, amount):
         self.__balance += amount
     def show_balance(self):
-        print(f"{self.owner} has ${self.__balance}")
+        print(f"{self.owner} has ${self.__balance}")"""
+
+name = input("What's your name?")
+print(f"Hi, {name}!")
+pet_name = input("what would you like to name your pet?")
+print(f"Very nice! Meet your class pet, goldfish, {pet_name}. Take good care of them!")
+input(f"Do you want to play with {pet_name}?") 
 
 class pet:
     def __init__(pet, happiness, hunger, clean, age):
@@ -75,13 +81,18 @@ class pet:
             pet.__happiness = 100
         if pet.__clean > 100:
             pet.__clean = 100
-name = input("What's your name?")
-print(f"Hi, {name}!")
-pet_name = input("what would you like to name your pet?")
-print(f"Very nice! Meet your class pet, goldfish, {pet_name}. Take good care of them!")
-input(f"Do you want to play with {pet_name}?")
+        if pet.__hunger > 125:
+            print(f"{pet_name} died due to obesity :C")
+        if pet.__hunger > 10:
+            print(f"{pet_name} died due to starvation :C")
+        def show_stats(pet):
+            pet.__age == 0
+            answer4 = input("It's the end of the day! Your goldfish is going to sleep. Would you like to see their stats?")
+            if answer4 == "yes":
+                print()
 
-class pet:
+
+"""class pet:
     def __init__
         animal.happiness = happiness
         animal.hunger = hunger
@@ -95,7 +106,7 @@ class pet:
 
     def show_balance(pet_name):
         print(f"{pet_name} is at {animal._balance1}% happiness")  """
-
+""" 
 def verifyemail():
     email = input("What is your email?")
     password = input("What is your password?")
@@ -105,4 +116,4 @@ def verifyemail():
         return "inavlid password, needs at least 1 uppercase"
     if "@" in email and any(char.isupper() for char in password) == True:
         return "valid email and password!"
-print(verifyemail())
+print(verifyemail()) """
