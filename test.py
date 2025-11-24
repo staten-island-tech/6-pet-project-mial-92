@@ -19,12 +19,6 @@ class BankAccount:
     def show_balance(self):
         print(f"{self.owner} has ${self.__balance}")"""
 
-name = input("What's your name?")
-print(f"Hi, {name}!")
-pet_name = input("what would you like to name your pet?")
-print(f"Very nice! Meet your class pet, goldfish, {pet_name}. Take good care of them!")
-input(f"Do you want to play with {pet_name}?") 
-
 class pet:
     def __init__(pet, happiness, hunger, clean, age):
         pet.__happiness = happiness
@@ -77,19 +71,33 @@ class pet:
             pet.__clean -= 10
         else: 
             print("Answer Invalid. Please Try Again")
-        if pet.__happiness > 100:
-            pet.__happiness = 100
-        if pet.__clean > 100:
-            pet.__clean = 100
-        if pet.__hunger > 125:
-            print(f"{pet_name} died due to obesity :C")
-        if pet.__hunger > 10:
-            print(f"{pet_name} died due to starvation :C")
         def show_stats(pet):
-            pet.__age == 0
+            pet.__age == 24
+            pet.__age += 1
             answer4 = input("It's the end of the day! Your goldfish is going to sleep. Would you like to see their stats?")
             if answer4 == "yes":
-                print()
+                print(f"{pet.__name}'s happiness is at {pet.__happiness}%. It's hunger is at {pet.__hunger}%. It's clean-ness is at {pet.__clean}%. Your pet is {pet.__age} years old.")
+
+name = input("What's your name?")
+print(f"Hi, {name}!")
+pet_name = input("what would you like to name your pet?")
+print(f"Very nice! Meet your class pet, goldfish, {pet_name}. Take good care of them!")
+input(f"Do you want to play with {pet_name}?")
+goldfish = pet({pet_name}, 85, 85, 85, 24)
+while goldfish.age > 350:
+    goldfish.play()
+    goldfish.feed()
+    goldfish.clean()
+    
+if pet.__happiness > 100:
+            pet.__happiness = 100
+if pet.__clean > 100:
+            pet.__clean = 100
+if pet.__hunger > 125:
+            print(f"{pet_name} died due to obesity :C")
+if pet.__hunger > 10:
+            print(f"{pet_name} died due to starvation :C")
+
 
 
 """class pet:
