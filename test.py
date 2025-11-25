@@ -42,7 +42,7 @@ class pet:
         if pet.__clean > 100:
             pet.__clean = 100
     def feed(pet):
-        pet.__hunger = 100
+        pet.__hunger = 90
         response2 = input(f"{name2}'s getting hungry... Would you like to feed them?")
         if response2 == "yes" in response2:
             pet.__happiness += 2
@@ -54,12 +54,8 @@ class pet:
             pet.__clean += 0
         else: 
             print("Answer Invalid. Please Try Again")
-        if pet.__happiness > 100:
-            pet.__happiness = 100
-        if pet.__clean > 100:
-            pet.__clean = 100
     def clean(pet):
-        pet.__clean = 100
+        pet.__clean = 95
         response3 = input(f"{name2}'s getting dirty... Would you like to clean them?")
         if response3 == "yes" in response3:
             pet.__happiness += 10
@@ -72,10 +68,10 @@ class pet:
         else: 
             print("Answer Invalid. Please Try Again")
     def status(pet):
-        pet.__age == 24
+        pet.__age = 24
         answer4 = input("It's the end of the day! Your goldfish is going to sleep. Would you like to see their stats?")
         if answer4 == "yes":
-            print(f"{pet.__name}'s happiness is at {pet.__happiness}%. It's hunger is at {pet.__hunger}%. It's clean-ness is at {pet.__clean}%. Your pet is {pet.__age} years old.")
+            print(f"{name2}'s happiness is at {pet.__happiness}%. It's hunger is at {pet.__hunger}%. It's clean-ness is at {pet.__clean}%. Your pet is {pet.__age} years old.")
             pet.__age += 1
         else:
             pet.__age += 1
@@ -83,10 +79,10 @@ class pet:
 name = input("What's your name?")
 print(f"Hi, {name}!")
 name2 = input("what would you like to name your pet?")
-goldfish = pet({name2},75,100,100,24)
+goldfish = pet(70, 90, 95, 24)
 print(f"Very nice! Meet your class pet, goldfish, {name2}. Take good care of them!")
 input(f"Do you want to play with {name2}?")
-while goldfish.age < 350:
+while pet.__age <= 70:
     goldfish.play()
     goldfish.feed()
     goldfish.clean()
@@ -97,8 +93,14 @@ while goldfish.age < 350:
         pet.__clean = 100
     if pet.__hunger > 125:
         print(f"{name2} died due to obesity :C")
+        break
     elif pet.__hunger > 10:
         print(f"{name2} died due to starvation :C")
+        break
+    elif pet.__age > 70:
+        print(f"{name2} died due to old age.")
+        break
+
 
 
 
