@@ -30,25 +30,39 @@ class pet:
         if response == "yes" in response:
             self.happiness += 5
             self.hunger -= 5
-            self.clean -= 12
+            self.clean -= 3
             print(f"{name2} is happy!")
         elif response == "no":
             self.happiness += 0
         else: 
             print("Answer Invalid. Please Try Again")
+        if goldfish.clean > 100:
+            goldfish.clean = 100
+        if goldfish.clean < 0:
+            goldfish.clean = 0
+        if goldfish.happiness > 100:
+            goldfish.happiness = 100
+        if goldfish.happiness < 0:
+            goldfish.happiness = 0
 
     def feed(self):
         response2 = input(f"{name2}'s getting hungry... Would you like to feed them?")
         if response2 == "yes" in response2:
             self.happiness += 2
             self.hunger += 5
-            self.clean -= 10
         elif response2 == "no" in response2:
             self.happiness += 0 
             self.hunger -= 8
-            self.clean += 0
         else: 
             print("Answer Invalid. Please Try Again")
+        if goldfish.clean > 100:
+            goldfish.clean = 100
+        if goldfish.clean < 0:
+            goldfish.clean = 0
+        if goldfish.happiness > 100:
+            goldfish.happiness = 100
+        if goldfish.happiness < 0:
+            goldfish.happiness = 0
 
     def tidy(self):
         response3 = input(f"{name2}'s getting dirty... Would you like to clean them?")
@@ -62,6 +76,14 @@ class pet:
             self.clean -= 10
         else: 
             print("Answer Invalid. Please Try Again")
+        if goldfish.clean > 100:
+            goldfish.clean = 100
+        if goldfish.clean < 0:
+            goldfish.clean = 0
+        if goldfish.happiness > 100:
+            goldfish.happiness = 100
+        if goldfish.happiness < 0:
+            goldfish.happiness = 0
 
     def status(self):
         answer4 = input("It's the end of the day! Your goldfish is going to sleep. Would you like to see their stats?")
@@ -81,10 +103,11 @@ while goldfish.age <= 70:
     goldfish.feed()
     goldfish.tidy()
     goldfish.status()
+
     if goldfish.hunger > 125:
         print(f"{name2} died due to obesity :C")
         break
-    elif goldfish.hunger > 10:
+    elif goldfish.hunger < 10:
         print(f"{name2} died due to starvation :C")
         break
     elif goldfish.age > 70:
