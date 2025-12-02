@@ -26,16 +26,20 @@ class pet:
         self.clean = clean
         self.age = age
     def play(self):
-        response = input(f"Do you want to play with {name2}?")
-        if response == "yes" in response:
+        response = input(f"Do you want to play with {name2}? yes/no")
+        while "yes" not in response and "no" not in response:
+            print("Answer Invalid. Please Try Again")
+            response = input(f"Do you want to play with {name2}?")
+        if response == "yes":
             self.happiness += 5
             self.hunger -= 5
-            self.clean -= 3
+            self.clean -= 23
             print(f"{name2} is happy!")
         elif response == "no":
             self.happiness += 0
         else: 
             print("Answer Invalid. Please Try Again")
+
         if goldfish.clean > 100:
             goldfish.clean = 100
         if goldfish.clean < 0:
@@ -46,13 +50,16 @@ class pet:
             goldfish.happiness = 0
 
     def feed(self):
-        response2 = input(f"{name2}'s getting hungry... Would you like to feed them?")
-        if response2 == "yes" in response2:
+        response2 = input(f"{name2}'s getting hungry... Would you like to feed them? yes/no")
+        while "yes" not in response2 and "no" not in response2:
+            print("Answer Invalid. Please Try Again")
+            response2 = input(f"{name2}'s getting hungry... Would you like to feed them?")
+        if response2 == "yes":
             self.happiness += 2
-            self.hunger += 5
-        elif response2 == "no" in response2:
+            self.hunger += 15
+        elif response2 == "no":
             self.happiness += 0 
-            self.hunger -= 8
+            self.hunger -= 30
         else: 
             print("Answer Invalid. Please Try Again")
         if goldfish.clean > 100:
@@ -65,15 +72,18 @@ class pet:
             goldfish.happiness = 0
 
     def tidy(self):
-        response3 = input(f"{name2}'s getting dirty... Would you like to clean them?")
-        if response3 == "yes" in response3:
+        response3 = input(f"{name2}'s getting dirty... Would you like to clean them? yes/no")
+        while "yes" not in response3 and "no" not in response3:
+            print("Answer Invalid. Please Try Again")
+            response3 = input(f"{name2}'s getting dirty... Would you like to clean them?")
+        if response3 == "yes":
             self.happiness += 10
             self.hunger += 0
             self.clean += 20
-        elif response3 == "no" in response3:
+        elif response3 == "no":
             self.happiness -= 5
             self.hunger += 0
-            self.clean -= 10
+            self.clean -= 35
         else: 
             print("Answer Invalid. Please Try Again")
         if goldfish.clean > 100:
@@ -86,9 +96,11 @@ class pet:
             goldfish.happiness = 0
 
     def status(self):
-        answer4 = input("It's the end of the day! Your goldfish is going to sleep. Would you like to see their stats?")
-        if answer4 == "yes":
-            print(f"{name2}'s happiness is at {self.happiness}%. It's hunger is at {self.hunger}%. It's clean-ness is at {self.clean}%. Your pet is {self.age} years old.")
+        response4 = input("It's the end of the day! Your goldfish is going to sleep. Would you like to see their stats?")
+        while "yes" not in response4 and "no" not in response4:
+            print("Answer Invalid. Please Try Again")
+        if response4 == "yes":
+            print(f"{name2}'s happiness is at {self.happiness}%. It's hunger is at {self.hunger}%. It's clean-ness is at {self.clean}%. Your pet is {self.age} days old.")
             self.age += 1
         else:
             self.age += 1
@@ -110,9 +122,10 @@ while goldfish.age <= 70:
     elif goldfish.hunger < 10:
         print(f"{name2} died due to starvation :C")
         break
-    elif goldfish.age > 70:
+    elif goldfish.age > 50:
         print(f"{name2} died due to old age.")
         break
+    
 
 
 
